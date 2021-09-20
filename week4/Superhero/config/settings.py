@@ -25,7 +25,7 @@ SECRET_KEY = '+iexr11p=u#)5*4x7ty$7ex*ymi*d5u5r2*myps=%53^(#c)0n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['crazychip98.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['crazychip98.pythonanywhere.com','127.0.0.1','localhost']
 
 
 # Application definition
