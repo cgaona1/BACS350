@@ -13,7 +13,9 @@ class HeroDetailView(TemplateView):
     template_name = 'hero_detail.html'
 
     def get_context_data(self, **kwargs):
-        return {'hero': models.Hero.objects.get(pk=1)}
+        hero_id = kwargs['pk']
+        hero = models.Hero.objects.get(pk=hero_id)
+        return {'hero': hero}
 
 
 class HeroListView(ListView):
