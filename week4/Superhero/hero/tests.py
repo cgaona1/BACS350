@@ -1,5 +1,6 @@
 from django.http import response
 from django.test import SimpleTestCase
+from django.test import TestCase
 
 # Create your tests here.
 class SimpleTests(SimpleTestCase):
@@ -10,3 +11,8 @@ class SimpleTests(SimpleTestCase):
     def test_admin_page_status_code(self):
         response = self.client.get('/admin/')
         self.assertEqual(response.status_code, 302)
+
+class Tests(TestCase):
+    def test_hero_page_status_code(self):
+        response = self.client.get('/hero/')
+        self.assertEqual(response.status_code, 200)
