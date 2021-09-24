@@ -1,0 +1,13 @@
+{% extends 'hero_theme.html' %}
+
+{% block content %}
+
+<h1>List of Heros</h1>
+<ul>
+    {% for hero in object_list %}
+    <li>
+        {{ hero.hero_name }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
