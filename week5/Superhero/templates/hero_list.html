@@ -6,7 +6,7 @@
 <ul>
     {% for hero in object_list %}
     <li>
-        {{ hero.hero_name }}
+        <a href="{{ hero.pk }}">{{ hero.hero_name }}</a>
     </li>
     {% endfor %}
 </ul>
