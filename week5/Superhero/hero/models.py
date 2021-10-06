@@ -4,6 +4,7 @@ from django.db import models
 class Hero(models.Model):
     hero_name = models.CharField(max_length=50)
     hero_description = models.CharField(max_length=200)
+    hero_image = models.CharField(max_length=100)
 
     def __str__(self):
         return f'{self.hero_name}'

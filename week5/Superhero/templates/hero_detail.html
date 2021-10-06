@@ -3,13 +3,12 @@
 {% block content %}
 
 <h1>Hero Detail</h1>
+<h2>Name: {{object.hero_name}}</h2>
 <ul>
-    <li>
-        Name: {{object.hero_name}}
-    </li>
     <li>
         Description: {{object.hero_description}}
     </li>
+    <img src="{{ object.hero_image }}" alt="{{ object.hero_name }}" width="500">
 </ul>
 
 {% endblock content %}
