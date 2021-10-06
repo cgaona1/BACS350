@@ -13,8 +13,9 @@ def get_hero(pk):
     return Hero.objects.get(pk=pk)
 
 
-def get_hero_name(name):
-    return Hero.objects.get(hero_name=name)
+def get_hero_name(pk):
+    b = get_hero(pk)
+    return b.hero_name
 
 
 def get_hero_description(description):

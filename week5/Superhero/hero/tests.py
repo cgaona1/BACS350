@@ -18,7 +18,7 @@ class CrudTest(TestCase):
 
     def test_read_hero(self):
         add_hero(name='Bob', description='Im bob')
-        h = get_hero_name('Bob')
-        self.assertEqual(h,'Bob')
+        name = get_hero_name(1)
+        self.assertEqual(name,'Bob')
 
 
