@@ -14,12 +14,13 @@ def get_hero(pk):
 
 
 def get_hero_name(pk):
-    b = get_hero(pk)
-    return b.hero_name
+    name = get_hero(pk).hero_name
+    return name
 
 
-def get_hero_description(description):
-    return Hero.objects.get(hero_description=description)
+def get_hero_description(pk):
+    description = get_hero(pk).hero_description
+    return description
 
 # UPDATE
 def set_hero_name(pk, name):
