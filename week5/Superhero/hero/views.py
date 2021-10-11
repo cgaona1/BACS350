@@ -5,7 +5,7 @@ from . import models
 # Create your views here.
 
 
-class HeroView(ListView):
+class HeroListView(ListView):
     template_name = 'hero_list.html'
     model = models.Hero
 

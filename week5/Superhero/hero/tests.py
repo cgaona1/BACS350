@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Hero
+#from .models import Hero
 from .hero import *
 
 # Create your tests here.
