@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import DetailView, ListView, TemplateView
+from django.views.generic import DetailView, ListView, RedirectView
 from . import models
 
 # Create your views here.
+class HeroView(RedirectView):
+    url = '/heros/'
 
 
 class HeroListView(ListView):
