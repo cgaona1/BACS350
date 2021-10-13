@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls.base import reverse_lazy
 
 # Create your models here.
 class Hero(models.Model):
@@ -8,3 +9,6 @@ class Hero(models.Model):
 
     def __str__(self):
         return f'{self.hero_name}'
+
+    def get_absolute_url(self):
+        return reverse_lazy('hero_detail', args=[str(self.id)])
