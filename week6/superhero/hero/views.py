@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from django.views.generic import DetailView, ListView, RedirectView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, ListView, RedirectView, CreateView, UpdateView, DeleteView
 from . import models
 
 # Create your views here.
@@ -15,3 +16,21 @@ class HeroListView(ListView):
 class HeroDetailView(DetailView):
     template_name = 'hero_detail.html'
     model = models.Hero
+
+
+class HeroCreateView(LoginRequiredMixin ,CreateView):
+    template_name = 'hero_add.html'
+    model = models.Hero
+    fields = ['hero_name', 'hero_description']
+
+
+class HeroUpdateView(LoginRequiredMixin ,UpdateView):
+    template_name = 'hero_edit.html'
+    model = models.Hero
+    fields = ['hero_name', 'hero_description']
+
+
+class HeroDeleteView(DeleteView):
+    template_name = 'hero_delete.html'
+    model = models.Hero
+    #success_url = reverse_lazy['hero_list']
