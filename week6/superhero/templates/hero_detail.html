@@ -3,15 +3,15 @@
 {% block content %}
 
 <h1>Hero Detail</h1>
-<h2>{{object.hero_name}}</h2>
+<h2>{{ hero.hero_name }}</h2>
 <ul>
     <li>
-        Description: {{object.hero_description}}
+        Description: {{ hero.hero_description }}
     </li>
-    <img src="{{ object.hero_image }}" alt="{{ object.hero_name }}" width="500">
+    <img src="{{ hero.hero_image }}" alt="{{ hero.hero_name }}" width="500">
 </ul>
 <p>
-    <a href="/heros/{{ object.pk }}/">Edit</a>
+    <a href="/heros/{{ hero.pk }}/">Edit</a> | <a href="/heros/{{ hero.pk }}/delete">Delete</a>
 </p>
 
 <p>

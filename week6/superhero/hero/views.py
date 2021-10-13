@@ -22,7 +22,7 @@ class HeroCreateView(LoginRequiredMixin ,CreateView):
     template_name = 'hero_add.html'
     model = models.Hero
     fields = ['hero_name', 'hero_description']
-    #success_url = reverse_lazy('hero_list')
+    
 
 class HeroUpdateView(LoginRequiredMixin ,UpdateView):
     template_name = 'hero_edit.html'
@@ -33,4 +33,4 @@ class HeroUpdateView(LoginRequiredMixin ,UpdateView):
 class HeroDeleteView(DeleteView):
     template_name = 'hero_delete.html'
     model = models.Hero
-    #success_url = reverse_lazy['hero_list']
+    success_url = reverse_lazy('hero_list')
