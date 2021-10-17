@@ -5,7 +5,7 @@ from . import models
 
 # Create your views here.
 class HeroView(RedirectView):
-    url = '/heros/'
+    url = '/heroes/'
 
 
 class HeroListView(ListView):
@@ -22,7 +22,7 @@ class HeroCreateView(LoginRequiredMixin ,CreateView):
     template_name = 'hero_add.html'
     model = models.Hero
     fields = ['hero_name', 'hero_description']
-    
+
 
 class HeroUpdateView(LoginRequiredMixin ,UpdateView):
     template_name = 'hero_edit.html'
