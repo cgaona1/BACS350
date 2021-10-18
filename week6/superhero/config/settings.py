@@ -54,6 +54,8 @@ ROOT_URLCONF = 'config.urls'
 
 LOGIN_REDIRECT_URL = 'hero_list'
 
+LOGOUT_REDIRECT_URL = 'hero_list'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
