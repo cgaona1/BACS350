@@ -33,5 +33,3 @@ class CrudTest(TestCase):
         delete_hero(1)
         num_heroes = len(list_heroes())
         self.assertEqual(num_heroes, 0)
-
-
