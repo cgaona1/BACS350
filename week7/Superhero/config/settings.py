@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hero.apps.HeroConfig',  # hero application
     'accounts.apps.AccountsConfig', # accounts application
+    'users.apps.UsersConfig', # users application
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+#Tell Django to use our custom user model
+AUTH_USER_MODEL = 'users.CustomUser'  # Custom user model
 
 ROOT_URLCONF = 'config.urls'
 
