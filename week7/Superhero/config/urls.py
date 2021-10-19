@@ -18,7 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),  # Login and logout url
-    path('accounts/', include('accounts.urls')), # url path for accounts app
+    path('users/', include('users.urls')), # url path for users app
+    path('users/', include('django.contrib.auth.urls')), # url path for login and logout
     path('', include('hero.urls')),
 ]

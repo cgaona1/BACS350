@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hero.apps.HeroConfig',  # hero application
-    'accounts.apps.AccountsConfig', # accounts application
     'users.apps.UsersConfig', # users application
 ]
 
