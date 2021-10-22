@@ -1,4 +1,5 @@
-from django.test import TestCase
+from django.test import TestCase, SimpleTestCase
+from django.urls import reverse
 #from .models import Hero
 from .hero import *
 
@@ -33,3 +34,18 @@ class CrudTest(TestCase):
         delete_hero(1)
         num_heroes = len(list_heroes())
         self.assertEqual(num_heroes, 0)
+
+
+class HomePageTests(TestCase):
+    def test_home_page_status_code(self):
+        response = self.client.get('/heroes/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_url_by_name(self):
+        response = self.client.get(reverse('hero_list'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_uses_correct_template(self):
+        response = self.client.get(reverse('hero_list'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'hero_list.html')
