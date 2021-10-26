@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['crazychip98.pythonanywhere.com', '127.0.0.1', 'localhost']
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Application definition
 
