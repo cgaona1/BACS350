@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hero.apps.HeroConfig',  # hero application
     'users.apps.UsersConfig', # users application
+    'crispy_forms', # third party app crispy forms
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 #STATIC_ROOT = 'static'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
