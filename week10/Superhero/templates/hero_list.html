@@ -1,0 +1,19 @@
+{% extends 'hero_theme.html' %}
+
+{% block content %}
+
+<h1>List of Heroes</h1>
+<ul>
+    {% for hero in object_list %}
+    <li>
+        <a href="{{ hero.pk }}">{{ hero.hero_name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<p>
+    <a href="/admin">Admin Page</a>
+</p>
+<p>
+    <a href="/heroes/hero_add">Hero Create</a>
+</p>
+{% endblock content %}
