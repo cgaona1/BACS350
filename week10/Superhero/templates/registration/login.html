@@ -1,5 +1,7 @@
 {% extends 'hero_theme.html' %}
 
+{% block title %} Login {% endblock title %}
+
 {% block content %}
 
 <h1>Log In</h1>
@@ -7,7 +9,7 @@
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Log In</button> | <a href="/users/signup">Sign Up</a>
+    <button type="submit" class="btn btn-primary">Log In</button> | <a href="/users/signup">Sign Up</a>
 </form>
 
 {% endblock content %}

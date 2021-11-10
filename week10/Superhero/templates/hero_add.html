@@ -1,12 +1,14 @@
 {% extends 'hero_theme.html' %}
 
+{% block title %} Hero Create {% endblock title %}
+
 {% block content %}
 
 <h1>Hero Create</h1>
 
 <form method="post">{% csrf_token %}
     {{ form.as_p}}
-    <button class="btn btn-success mt-5" type="submit">Add Hero</button>
+    <button class="btn btn-primary mt-3" type="submit">Add Hero</button>
 </form>
 
 {% endblock content %}
