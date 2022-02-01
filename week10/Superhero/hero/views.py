@@ -21,13 +21,13 @@ class HeroDetailView(DetailView):
 class HeroCreateView(LoginRequiredMixin ,CreateView):
     template_name = 'hero_add.html'
     model = models.Hero
-    fields = ['hero_name', 'hero_description']
+    fields = ['hero_name', 'hero_description', 'hero_image']
 
 
 class HeroUpdateView(LoginRequiredMixin ,UpdateView):
     template_name = 'hero_edit.html'
     model = models.Hero
-    fields = ['hero_name', 'hero_description']
+    fields = ['hero_name', 'hero_description', 'hero_image']
 
 
 class HeroDeleteView(DeleteView):
